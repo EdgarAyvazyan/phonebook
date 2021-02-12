@@ -20,6 +20,7 @@ public class ContactServiceImpl implements ContactService {
     public Set<Contact> getByPhoneNumber(Set<Contact> contacts) {
         //TODO
         return null;
+
     }
 
     @Override
