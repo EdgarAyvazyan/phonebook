@@ -48,7 +48,9 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public void getAllContacts(Set<Contact> contacts) {
-        //TODO
+        if (contacts != null) {
+            contacts.forEach(System.out::println);
+        }
     }
 
     @Override
