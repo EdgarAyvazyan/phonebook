@@ -52,15 +52,17 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public Contact getContact(Contact contact, Set<Contact> contacts) {
         //TODO
-         // Contact result=null;
-       // if (contact!=null && contacts !=null){
-        //   for (Contact con: contacts){
-        //       System.out.println("Please enter the contact");
+        Contact result = null;
+        if (contact != null && contacts != null) {
+            for (Contact con : contacts) {
+                if (con.getFirstName().equals(contact.getFirstName()) && con.getLastName().equals(contact.getLastName()) &&
+                        con.getPhoneNumber().equals(contact.getPhoneNumber()) && con.getEmail().equals(contact.getEmail())) {
+                    result = contact;
+                }
+            }
+        }
 
-        //   }
-        // }
-
-          return null;
+        return result;
 
     }
 
@@ -72,7 +74,7 @@ public class ContactServiceImpl implements ContactService {
             contacts.add(contact);
             Contact newContact = new Contact();
             Address address = new Address();
-            
+
             System.out.println("Please enter first name");
             String firstName = scanner.next();
             newContact.setFirstName(firstName);
@@ -128,8 +130,8 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public boolean delete(Set<Contact> contacts) {
         //TODO
-        if (contacts!=null){
-            Contact contact=new Contact();
+        if (contacts != null) {
+            Contact contact = new Contact();
             System.out.println("For deleting contact please enter");
             System.out.println("Please enter the first name");
             contact.setFirstName(scanner.next());
@@ -137,8 +139,9 @@ public class ContactServiceImpl implements ContactService {
             contact.setLastName(scanner.next());
             System.out.println("Please enter an email");
             contact.setEmail(scanner.next());
-            System.out.println("Please enter phone number(098******)");
+            System.out.println("Please enter phone number");
             contact.setPhoneNumber(scanner.next());
+            contacts.remove(getContact(contact, contacts));
         }
         return false;
     }
@@ -164,6 +167,17 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public boolean deleteContactById(Set<Contact> contacts) {
         //TODO
+        if (contacts != null) {
+            System.out.println("For deleting contact enter contact's ID");
+            int contactID = scanner.nextInt();
+            for (Contact contact : contacts) {
+                if (contact.getID() == contactID) {
+                    contacts.remove(contact);
+                    return true;
+                }
+
+            }
+        }
         return false;
     }
 
@@ -211,6 +225,9 @@ public class ContactServiceImpl implements ContactService {
         address.setStreet(scanner.next());
         System.out.println("Please enter the apartment");
         address.setApartment(scanner.next());
+        contact.setAddress(address);
+
+
         return contact;
     }
 }
