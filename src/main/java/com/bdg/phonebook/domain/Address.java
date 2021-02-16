@@ -71,8 +71,8 @@ public class Address {
                 ", apartment='" + apartment + '\'' +
                 '}';
     }
-/**
- * There is no need to override equals and hash code.*/
+    /**
+     * There is no need to override equals and hash code.*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
