@@ -65,9 +65,7 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public boolean addContact(Set<Contact> contacts) {
         if (contacts != null) {
-            final Contact contact = createContact();
-            contacts.add(contact);
-            return true;
+            return contacts.add(createContact());
         }
         return false;
     }
@@ -108,7 +106,7 @@ public class ContactServiceImpl implements ContactService {
             contact.setEmail(scanner.next());
             Contact contactToEdit = getContact(contact,contacts);
             Contact newContact = createContact();
-            editedContact = updatedContactToContact(contactToEdit,newContact);
+            editedContact = updatedContactToContact(newContact, contactToEdit);
         }
         return editedContact;
     }
