@@ -4,14 +4,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class Contact {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String phoneNumber;
-    private String email;
-    private String contactType;
-    private Address address;
-    private static int count;
+    public int id;
+    public String firstName;
+    public String lastName;
+    public String phoneNumber;
+    public String email;
+    public String contactType;
+    public Address address;
+    public static int count;
 
 
     public Contact() {
