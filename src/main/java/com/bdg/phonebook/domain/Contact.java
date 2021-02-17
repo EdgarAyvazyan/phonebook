@@ -61,7 +61,7 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public String getPhoneNumber(String next) {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -89,7 +89,9 @@ public class Contact {
         return address;
     }
 
-
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     @Override
     public String toString() {

@@ -38,7 +38,7 @@ public class ContactServiceImpl implements ContactService {
             System.out.println("Please enter the phone number");
             String phoneNumber = scanner.next();
             for (Contact contact : contacts) {
-                if (contact.getPhoneNumber(scanner.next()).equals(phoneNumber)) {
+                if (contact.getPhoneNumber().equals(phoneNumber)) {
                     result.add(contact);
                 }
             }
@@ -49,13 +49,13 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public Contact getContact(Contact contact, Set<Contact> contacts) {
         Contact result = new Contact();
-       if (contacts != null) {
+        if (contacts != null) {
             System.out.println("Please enter the contact");
             String getContact = scanner.next();
             System.out.println("Please enter the First name");
             String firstName = scanner.next();
             for (Contact type : contacts) {
-                if (type.getContactType().equals(getContact) && contact.getFirstName().equals(firstName))  {
+                if (type.getContactType().equals(getContact) && contact.getFirstName().equals(firstName)) {
                     result = type;
                 }
             }
@@ -65,80 +65,56 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public boolean addContact(Set<Contact> contacts) {
-        try {
-            Contact contact = new Contact();
-            Address address = new Address();
-
-            System.out.println("Please enter the name");
-            contact.setFirstName(scanner.next());
-            System.out.println("Please enter the last name");
-            contact.setLastName(scanner.next());
-            System.out.println("Please enter the phone number (+374(code)********)");
-            contact.setPhoneNumber(scanner.next());
-            System.out.println("Please enter email");
-            contact.setEmail(scanner.next());
-            System.out.println("Please enter contact type number (1 for Mobile, 2 for Home, 3 for Work))");
-            contact.setContactType(scanner.next());
-            System.out.println("Please enter contact address");
-            System.out.println("Please enter the country");
-            address.setCountry(scanner.next());
-            System.out.println("Please enter the city");
-            address.setCity(scanner.next());
-            System.out.println("Please enter the street");
-            address.setStreet(scanner.next());
-            System.out.println("Please enter the building");
-            address.setBuilding(scanner.next());
-            System.out.println("Please enter the apartment");
-            address.setApartment(scanner.next());
-
+        if (contacts != null) {
+            Contact contact = createContact();
             contacts.add(contact);
             return true;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return false;
         }
-
-
+        return false;
     }
 
     @Override
     public boolean delete(Set<Contact> contacts) {
-        try{
+        try {
             System.out.println("phone number");
             String number = scanner.next();
             for (Contact contact : contacts) {
-                if (contact.getPhoneNumber(scanner.next()).equals(number)) {
+                if (contact.getPhoneNumber().equals(number)) {
                     contacts.remove(contact);
                     return true;
                 }
             }
             return false;
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
         }
     }
 
+
     @Override
     public Contact editContact(Set<Contact> contacts) {
-            System.out.println("Please enter the first name");
-            String firstName = scanner.next();
-            System.out.println("Please enter the last name");
-            String lastName = scanner.next();
-            for (Contact contact : contacts) {
-                if (contact.getFirstName().equals(firstName) &&
-                        contact.getLastName().equals(lastName)) {
-                }
-            }
-            return null;
+        Contact editedContact = null;
+        if (contacts != null) {
+            Contact contact = new Contact();
+            System.out.println("First name");
+            contact.setFirstName(scanner.next());
+            System.out.println("Last name");
+            contact.setLastName(scanner.next());
+            System.out.println("Phone number");
+            contact.setPhoneNumber(scanner.next());
+            Contact contactEdit = getContact(contact, contacts);
+            Contact newContact = createContact();
+            editedContact = updatedContactToContact(contactEdit, newContact);
         }
-
+        return editedContact;
+    }
 
 
     @Override
     public void getAllContacts(Set<Contact> contacts) {
 
-        if(contacts.isEmpty()) {
+        if (contacts.isEmpty()) {
             System.out.println("The contact list is empty");
         } else {
             contacts.forEach(System.out::println);
@@ -147,17 +123,54 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public boolean deleteContactById(Set<Contact> contacts) {
-        //TODO
+        if (contacts != null) {
+            System.out.println("Enter contacts ID");
+            int contactId = scanner.nextInt();
+            for (Contact contact : contacts) {
+                if (contact.getId() == contactId) {
+                    contacts.remove(contact);
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
     private static Contact updatedContactToContact(Contact source, Contact destination) {
-        //TODO
-        return null;
+        source.setFirstName(destination.getFirstName());
+        source.setLastName(destination.getFirstName());
+        source.setPhoneNumber(destination.getPhoneNumber());
+        return source;
     }
 
     public static Contact createContact() {
-        //TODO
-        return null;
+        Scanner scanner = new Scanner(System.in);
+        Contact contact = new Contact();
+        Address address = new Address();
+        System.out.println("Enter contacts first name");
+        contact.setFirstName(scanner.next());
+        System.out.println("Enter contacts last name");
+        contact.setLastName(scanner.next());
+        System.out.println("Enter contacts phone number(+374 ))");
+        contact.setPhoneNumber(scanner.next());
+        System.out.println("Enter contacts email");
+        contact.setEmail(scanner.next());
+        System.out.println("Enter contact type in number (1 for Mobile, 2 for Home, 3 for Work)");
+        contact.setContactType(scanner.next());
+        System.out.println("Enter contact address");
+        System.out.println("Enter the country");
+        address.setCountry(scanner.next());
+        System.out.println("Enter the city");
+        address.setCity(scanner.next());
+        System.out.println("Enter the street");
+        address.setStreet(scanner.next());
+        System.out.println("Enter the building");
+        address.setBuilding(scanner.next());
+        System.out.println("Enter the apartment");
+        address.setApartment(scanner.next());
+        contact.setAddress(address);
+
+        return contact;
     }
 }
+
