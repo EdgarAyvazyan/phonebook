@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c9ffea9-05e6-4e2f-a0ee-2b001280ec2a" name="Default Changelist" comment="first commit">
+    <list default="true" id="2d4fd21e-880e-499f-9218-c52c4f1531e1" name="Default Changelist" comment="todos for serviceImpl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bdg/phonebook/service/impl/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bdg/phonebook/service/impl/ContactServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,62 +13,118 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="C:\Program Files\Git\bin\git.exe" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="GurgenHarutyunyan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectId" id="1oI4v9PCJMCLxQ4pFmMx6W8P5Wa" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-  </component>
+  <component name="ProjectId" id="1oAM4nxUYaCFOTxeFOK8bICjX4L" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bdg" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bdg" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bdg.phonebook.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ContactMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bdg.phonebook.ContactMain" />
+      <module name="com.bdg.phonebook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bdg.phonebook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ContactMain" />
+        <item itemvalue="Application.ContactMain" />
+        <item itemvalue="Application.ContactMain" />
+        <item itemvalue="Application.ContactMain" />
+        <item itemvalue="Application.ContactMain" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2c9ffea9-05e6-4e2f-a0ee-2b001280ec2a" name="Default Changelist" comment="" />
-      <created>1612961002967</created>
+      <changelist id="2d4fd21e-880e-499f-9218-c52c4f1531e1" name="Default Changelist" comment="" />
+      <created>1612724756769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1612961002967</updated>
+      <updated>1612724756769</updated>
+      <workItem from="1612724758262" duration="7562000" />
+      <workItem from="1613143486130" duration="3396000" />
+      <workItem from="1613632758691" duration="2179000" />
+      <workItem from="1613637749895" duration="2047000" />
+      <workItem from="1613640213938" duration="47000" />
     </task>
-    <task id="LOCAL-00001" summary="first commit">
-      <created>1613149464033</created>
+    <task id="LOCAL-00001" summary="add message">
+      <created>1612725975329</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1613149464033</updated>
+      <updated>1612725975329</updated>
     </task>
-    <task id="LOCAL-00002" summary="first commit">
-      <created>1613323700813</created>
+    <task id="LOCAL-00002" summary="Revert &quot;Create README.md&quot;&#10;&#10;This reverts commit 485a4852">
+      <created>1612979808714</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1613323700813</updated>
+      <updated>1612979808715</updated>
     </task>
-    <task id="LOCAL-00003" summary="first commit">
-      <created>1613403839751</created>
+    <task id="LOCAL-00003" summary="change gitignore file">
+      <created>1613145893412</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1613403839751</updated>
+      <updated>1613145893412</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="todos for serviceImpl">
+      <created>1613637392014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613637392014</updated>
+    </task>
+    <task id="LOCAL-00005" summary="todos for serviceImpl">
+      <created>1613639837499</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613639837499</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -84,7 +139,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="add message" />
+    <MESSAGE value="Revert &quot;Create README.md&quot;&#10;&#10;This reverts commit 485a4852" />
+    <MESSAGE value="change gitignore file" />
+    <MESSAGE value="todos for serviceImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="todos for serviceImpl" />
   </component>
 </project>

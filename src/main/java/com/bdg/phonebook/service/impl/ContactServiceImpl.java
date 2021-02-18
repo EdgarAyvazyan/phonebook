@@ -72,6 +72,7 @@ public class ContactServiceImpl implements ContactService {
         if (contacts != null) {
             final Contact contact = createContact();
             contacts.add(contact);
+//          todo why you need to create contact second time after createContact() method? Ceck this issue.
             Contact newContact = new Contact();
             Address address = new Address();
 
