@@ -93,7 +93,8 @@ public class ContactServiceImpl implements ContactService {
             contact.setPhoneNumber(scanner.next());
             System.out.println("Please enter the email");
             contact.setEmail(scanner.next());
-
+//          TODO there is no need for loop. You have to find contact
+//           by getContact() method and remove from set.
             for (Contact contactFromContacts : contacts) {
                 if (
                         contactFromContacts.getPhoneNumber().equals(contact.phoneNumber) &&
@@ -108,13 +109,14 @@ public class ContactServiceImpl implements ContactService {
 
         return true;
     }
-
+//    todo bad implementation. Write this method again. It can not work truly.
     @Override
     public Contact editContact(Set<Contact> contacts) {
         //TODO
 
         Contact contact = new Contact();
         if (contacts != null) {
+//           TODO there is no need to delete contact.
             System.out.println("For deleting contact please enter:");
             System.out.println("Please enter the first name");
             contact.setFirstName(scanner.next());
@@ -124,7 +126,7 @@ public class ContactServiceImpl implements ContactService {
             contact.setPhoneNumber(scanner.next());
             System.out.println("Please enter the email");
             contact.setEmail(scanner.next());
-
+//          TODO use getContact() method
             for (Contact contactFromContacts : contacts) {
                 if (
                         contactFromContacts.getPhoneNumber().equals(contact.phoneNumber) &&
