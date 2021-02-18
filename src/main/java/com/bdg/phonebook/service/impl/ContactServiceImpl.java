@@ -50,6 +50,17 @@ public class ContactServiceImpl implements ContactService {
     public Contact getContact(Contact contact, Set<Contact> contacts) {
         Contact result = new Contact();
         if (contacts != null) {
+            //TODO you have to fetch firstName,lastName,phoneNumber,email for getting contact.
+            // Like
+            // Contact result = null;
+            //        if (contact != null && contacts != null) {
+            //            for (Contact con : contacts) {
+            //                if (con.getFirstName().equals(contact.getFirstName()) && con.getLastName().equals(contact.getLastName())
+            //                        && con.getPhoneNumber().equals(contact.getPhoneNumber()) && con.getEmail().equals(contact.getEmail())) {
+            //                    result = con;
+            //                }
+            //            }
+            //        }
             System.out.println("Please enter the contact");
             String getContact = scanner.next();
             System.out.println("Please enter the First name");
@@ -75,6 +86,10 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public boolean delete(Set<Contact> contacts) {
+
+//        TODO you dont have to write try catch block, for deleting contact
+//         you need find it by get contact method. User have to enter firstName,lastName,phoneNumber, email.
+//         See getContact method comment
         try {
             System.out.println("phone number");
             String number = scanner.next();
@@ -135,7 +150,7 @@ public class ContactServiceImpl implements ContactService {
         }
         return false;
     }
-
+//    TODO you have to update all fields in contact.
     private static Contact updatedContactToContact(Contact source, Contact destination) {
         source.setFirstName(destination.getFirstName());
         source.setLastName(destination.getFirstName());
@@ -155,6 +170,22 @@ public class ContactServiceImpl implements ContactService {
         contact.setPhoneNumber(scanner.next());
         System.out.println("Enter contacts email");
         contact.setEmail(scanner.next());
+//      TODO for initialize contact type you have to declare  switch block with values 1,2,3
+//       int contactType = scanner.nextInt();
+//        switch (contactType) {
+//            case 1: {
+//                contact.setContactType(ContactTypeEnum.MOBILE.getName());
+//                break;
+//            }
+//            case 2: {
+//                contact.setContactType(ContactTypeEnum.HOME.getName());
+//                break;
+//            }
+//            case 3: {
+//                contact.setContactType(ContactTypeEnum.WORK.getName());
+//                break;
+//            }
+//        }
         System.out.println("Enter contact type in number (1 for Mobile, 2 for Home, 3 for Work)");
         contact.setContactType(scanner.next());
         System.out.println("Enter contact address");
