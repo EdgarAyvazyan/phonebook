@@ -72,7 +72,6 @@ public class ContactServiceImpl implements ContactService {
         if (contacts != null) {
             final Contact contact = createContact();
             contacts.add(contact);
-            Contact newContact = new Contact();
             Address address = new Address();
 
             System.out.println("Please enter first name");
