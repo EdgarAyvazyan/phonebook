@@ -57,7 +57,7 @@ public class ContactServiceImpl implements ContactService {
             for (Contact con : contacts) {
                 if (con.getFirstName().equals(contact.getFirstName()) && con.getLastName().equals(contact.getLastName()) &&
                         con.getPhoneNumber().equals(contact.getPhoneNumber()) && con.getEmail().equals(contact.getEmail())) {
-                    result = contact;
+                    result = con;
                 }
             }
         }
@@ -72,7 +72,6 @@ public class ContactServiceImpl implements ContactService {
         if (contacts != null) {
             final Contact contact = createContact();
             contacts.add(contact);
-            Contact newContact = new Contact();
             Address address = new Address();
 
             System.out.println("Please enter first name");
@@ -133,23 +132,39 @@ public class ContactServiceImpl implements ContactService {
         if (contacts != null) {
             Contact contact = new Contact();
             System.out.println("For deleting contact please enter");
-            System.out.println("Please enter the first name");
+            System.out.println("Please enter contact's first name");
             contact.setFirstName(scanner.next());
-            System.out.println("Please enter the last name");
+            System.out.println("Please enter contact's last name");
             contact.setLastName(scanner.next());
-            System.out.println("Please enter an email");
+            System.out.println("Please enter contact's email");
             contact.setEmail(scanner.next());
-            System.out.println("Please enter phone number");
+            System.out.println("Please enter contact's number");
             contact.setPhoneNumber(scanner.next());
             contacts.remove(getContact(contact, contacts));
         }
-        return false;
+        return true;
     }
 
     @Override
     public Contact editContact(Set<Contact> contacts) {
         //TODO
-        return null;
+        Contact edited = null;
+        if (contacts != null) {
+            Contact contact = new Contact();
+            System.out.println("For editing contact please enter");
+            System.out.println("Please enter contact's first name");
+            Contact.setFirstName(scanner.next());
+            System.out.println("Please enter contact's last name");
+            Contact.setLastName(scanner.next());
+            System.out.println("Please enter contact's  email");
+            Contact.setEmail(scanner.next());
+            System.out.println("Please enter contact's phone number");
+            Contact.setPhoneNumber(scanner.next());
+            Contact newContact = createContact();
+            Contact contactToEdit = getContact(contact, contacts);
+            edited=updatedContactToContact(newContact,contactToEdit);
+        }
+        return edited;
     }
 
     @Override
