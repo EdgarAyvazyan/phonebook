@@ -149,8 +149,26 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public Contact editContact(Set<Contact> contacts) {
         //TODO
-        return null;
+        Contact edited = null;
+        if (contacts != null) {
+            Contact contact = new Contact();
+            System.out.println("Please enter editing contact");
+            System.out.println("Please enter contact's  first name");
+            contact.setFirstName(scanner.next());
+            System.out.println("Please enter contact's last name");
+            contact.setLastName(scanner.next());
+            System.out.println("Please enter  contact's phone number");
+            contact.setPhoneNumber(scanner.next());
+            System.out.println("Please enter contact's email");
+            contact.setEmail(scanner.next());
+            Contact newContact = createContact();
+            Contact contactEdit = getContact(contact, contacts);
+            edited = updatedContactToContact(newContact, contactEdit);
+        }
+        return edited;
     }
+
+
 
     @Override
     public void getAllContacts(Set<Contact> contacts) {
