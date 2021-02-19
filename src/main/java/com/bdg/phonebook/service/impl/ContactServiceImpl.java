@@ -57,7 +57,7 @@ public class ContactServiceImpl implements ContactService {
             for (Contact con : contacts) {
                 if (con.getFirstName().equals(contact.getFirstName()) && con.getLastName().equals(contact.getLastName()) &&
                         con.getPhoneNumber().equals(contact.getPhoneNumber()) && con.getEmail().equals(contact.getEmail())) {
-                    result = contact;
+                    result = con;
                 }
             }
         }

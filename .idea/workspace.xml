@@ -3,8 +3,8 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="ChangeListManager"><list default="true" id="2c9ffea9-05e6-4e2f-a0ee-2b001280ec2a" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+  <component name="ChangeListManager">
+    <list default="true" id="2c9ffea9-05e6-4e2f-a0ee-2b001280ec2a" name="Default Changelist" comment="third commit">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bdg/phonebook/service/impl/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bdg/phonebook/service/impl/ContactServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
