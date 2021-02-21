@@ -97,12 +97,10 @@ public class ContactServiceImpl implements ContactService {
             System.out.println("Enter contact's email");
             contact.setEmail(scanner.next());
             Contact contactToEdit = getContact(contact, contacts);
-            Contact newcontact = createContact();
-            return editedContact;
+            Contact newContact = createContact();
+            editedContact = updatedContactToContact(newContact, contactToEdit);
         }
-
-        return null;
-
+        return editedContact;
     }
 
     @Override
@@ -133,42 +131,30 @@ public class ContactServiceImpl implements ContactService {
     }
 
     private static Contact updatedContactToContact(Contact source, Contact destination) {
-        System.out.println("Please enter the Name of contact which You want to update");
-        Contact updatedContact = null;
-        if (source != null) {
-            Contact contact = new Contact();
-            System.out.println("For updating contact enter:");
-            System.out.println("Enter contact's first name");
-            destination.setFirstName(source.getFirstName());
-            System.out.println("Enter contact's last name");
-            destination.setLastName(source.getLastName());
-            System.out.println("Enter contact's phone number");
-            destination.setPhoneNumber(source.getPhoneNumber());
-            System.out.println("Enter contact's email");
-            destination.setEmail(source.getEmail());
-            return destination;
-        }
-        return updatedContact;
+        destination.setFirstName(source.getFirstName());
+        destination.setLastName(source.getLastName());
+        destination.setPhoneNumber(source.getPhoneNumber());
+        destination.setEmail(source.getEmail());
+        destination.setContactType(source.getContactType());
+        destination.setAddress(source.getAddress());
+        return destination;
     }
 
-    public Contact createContact() {
-        System.out.println("Please create the contact");
+    public static Contact createContact() {
+        Scanner scanner = new Scanner(System.in);
         Contact contact = new Contact();
-        System.out.println("Please enter the name");
-        String firstName = scanner.next();
-        contact.setFirstName(firstName);
+        System.out.println("Please enter the first name");
+        contact.setFirstName(scanner.next());
         System.out.println("Please enter the last name");
-        String lastName = scanner.next();
-        contact.setLastName(lastName);
+        contact.setLastName(scanner.next());
         System.out.println("Please enter the phone number");
-        String phoneNumber = scanner.next();
-        contact.setPhoneNumber(phoneNumber);
+        contact.setPhoneNumber(scanner.next());
         System.out.println("Please enter the email");
-        String email = scanner.next();
-        contact.setEmail(email);
+        contact.setEmail(scanner.next());
         System.out.println("Please enter the contact type");
-        String contactType = scanner.next();
-        contact.setContactType(contactType);
+        int contactType = scanner.nextInt();
+        contact.setContactType(scanner.next());
+
         System.out.println("Now create the Address");
         Address address = new Address();
         System.out.println("Please enter the country");

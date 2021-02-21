@@ -56,7 +56,6 @@ public class Contact {
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -85,8 +84,8 @@ public class Contact {
         this.contactType = contactType;
     }
 
-    public Address getAddress(Address address) {
-        return this.address;
+    public Address getAddress() {
+        return address;
     }
 
     public void setAddress(Address address) {
