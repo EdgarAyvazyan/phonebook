@@ -9,7 +9,7 @@ public interface ContactService {
 
     Set<Contact> getByPhoneNumber(Set<Contact> contacts);
 
-    Contact getContact(Contact contact, Set<Contact> contacts);
+    Contact getContact(Set<Contact> contacts);
 
     boolean addContact(Set<Contact> contacts);
 

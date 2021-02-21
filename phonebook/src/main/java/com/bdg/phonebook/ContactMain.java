@@ -1,5 +1,6 @@
 package com.bdg.phonebook;
 
+import com.bdg.phonebook.domain.Address;
 import com.bdg.phonebook.domain.Contact;
 import com.bdg.phonebook.service.impl.ContactServiceImpl;
 
@@ -16,6 +17,11 @@ public class ContactMain {
 
         System.out.println("Welcome to phone book");
         System.out.println("Please follow to commands");
+
+        Address address = new Address("Armenia", "Yerevan", "Mikoyan", "7", "8");
+        Contact newContact = new Contact("Tigran", "Martirosyan", "+37498077787",
+                "tikomartirosyan98@gmail.com", "Mobile", address);
+        contacts.add(newContact);
 
         while (true) {
             System.out.println("press 0 for adding contact");
