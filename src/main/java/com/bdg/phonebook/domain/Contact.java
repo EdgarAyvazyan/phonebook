@@ -85,8 +85,8 @@ public class Contact {
         this.contactType = contactType;
     }
 
-    public Address getAddress() {
-        return address;
+    public Address getAddress(Address address) {
+        return this.address;
     }
 
     public void setAddress(Address address) {

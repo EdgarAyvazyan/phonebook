@@ -75,16 +75,15 @@ public class ContactMain {
                     }
                     break;
                 }
-
                 case "5": {
                     service.getAllContacts(contacts);
                     break;
                 }
-                case "6":{
+                case "6": {
                     service.deleteContactById(contacts);
                     break;
                 }
-                default:{
+                default: {
                     System.out.println("You are enter wrong command");
                 }
             }
