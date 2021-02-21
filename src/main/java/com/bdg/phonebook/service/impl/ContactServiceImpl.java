@@ -47,14 +47,15 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public Contact getContact(Contact contact, Set<Contact> contacts) {
+        Contact result = null;
         if (contact != null && contacts != null) {
-            for (Contact item : contacts) {
-                if (contact.equals(item)) {
-                    return contact;
+            for (Contact cont : contacts) {
+                if (cont.getFirstName().equals(contact.getFirstName()) && cont.getLastName().equals(contact.getLastName()) && cont.getPhoneNumber().equals(contact.getPhoneNumber()) && cont.getEmail().equals(contact.getEmail())) {
+                    result = cont;
                 }
             }
         }
-        return null;
+        return result;
     }
 
     @Override
@@ -152,7 +153,6 @@ public class ContactServiceImpl implements ContactService {
         System.out.println("Please enter the email");
         contact.setEmail(scanner.next());
         System.out.println("Please enter the contact type");
-        int contactType = scanner.nextInt();
         contact.setContactType(scanner.next());
 
         System.out.println("Now create the Address");
