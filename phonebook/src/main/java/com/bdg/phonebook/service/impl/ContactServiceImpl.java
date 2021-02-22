@@ -87,13 +87,6 @@ public class ContactServiceImpl implements ContactService {
             String firstName = scanner.next();
             System.out.println("Please insert last name");
             String lastName = scanner.next();
-            System.out.println("Please insert id - only numbers");
-            int id = 0;
-            try {
-                id = scanner.nextInt();
-            } catch (Exception e) {
-                System.out.println("Please input integer number");
-            }
             System.out.println("Please insert email");
             String email = scanner.next();
             System.out.println("Please insert phoneNumber");
@@ -102,7 +95,6 @@ public class ContactServiceImpl implements ContactService {
                 if (contactItem.getFirstName().equals(firstName) &&
                         contactItem.getLastName().equals(lastName) &&
                         contactItem.getEmail().equals(email) &&
-                        contactItem.getId() == id &&
                         contactItem.getPhoneNumber().equals(phoneNumber)
                 ) {
                     contacts.remove(contactItem);
